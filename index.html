@@ -1,10 +1,10 @@
 <title>DJSCHOOL.BY — Домен продаётся | DJ школа Беларусь</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Продаётся домен DJSCHOOL.BY — идеально для DJ школы, студии или курсов диджеинга в Беларуси. Цена 2900 BYN. Передача в течение 24 часов.">
+<meta name="description" content="Продаётся домен DJSCHOOL.BY с Instagram-аккаунтом и оригинальным логотипом. Цена 3000 BYN. Передача всего покупателю после оплаты.">
 <meta name="keywords" content="djschool.by, домен продаётся, DJ школа Беларусь, диджей школа Минск, купить домен">
 <meta property="og:title" content="DJSCHOOL.BY — Домен продаётся">
-<meta property="og:description" content="Премиальный домен для DJ школы в Беларуси. Цена 2900 BYN. Передача за 24 часа.">
+<meta property="og:description" content="Премиальный комплект для DJ школы в Беларуси: домен, Instagram-аккаунт и оригинальный логотип. Цена 3000 BYN.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://djschool.by">
 <link rel="canonical" href="https://djschool.by">
@@ -13,11 +13,11 @@
   "@context": "https://schema.org",
   "@type": "WebPage",
   "name": "DJSCHOOL.BY — Домен продаётся",
-  "description": "Продаётся домен DJSCHOOL.BY для DJ школы или студии в Беларуси. Цена 2900 BYN.",
+  "description": "Продаётся комплект DJSCHOOL.BY для DJ школы или студии в Беларуси. Цена 3000 BYN.",
   "url": "https://djschool.by",
   "offers": {
     "@type": "Offer",
-    "price": "2900",
+    "price": "3000",
     "priceCurrency": "BYN",
     "availability": "https://schema.org/InStock"
   }
@@ -63,7 +63,7 @@ body::after {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 60px 24px;
+  padding: 60px 24px 84px;
   text-align: center;
   gap: 0;
 }
@@ -168,13 +168,13 @@ body::after {
 /* Info card */
 .info-card {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 14px;
   background: rgba(255,255,255,0.04);
   border: 1px solid rgba(255,255,255,0.07);
   border-radius: 16px;
-  padding: 18px 28px;
-  max-width: 360px;
+  padding: 20px 24px;
+  width: min(100%, 420px);
   text-align: left;
 }
 
@@ -191,6 +191,27 @@ body::after {
   font-size: 13px;
   color: rgba(255,255,255,0.38);
   line-height: 1.5;
+}
+
+.info-list {
+  list-style: none;
+  margin-top: 9px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.6;
+}
+
+.info-list li::before {
+  content: '•';
+  color: rgba(255,255,255,0.35);
+  margin-right: 7px;
+}
+
+.info-list a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: rgba(255,255,255,0.3);
+  text-underline-offset: 3px;
 }
 
 /* Footer */
@@ -218,7 +239,7 @@ footer {
 
   <div class="price-block">
     <div class="price-label">Цена</div>
-    <div class="price-amount">2 900</div>
+    <div class="price-amount">3 000</div>
     <div class="price-currency">Белорусских рублей</div>
   </div>
 
@@ -230,8 +251,13 @@ footer {
   <div class="info-card">
     <div class="info-icon">🚀</div>
     <div>
-      <div class="info-title">Готов к работе</div>
-      <div class="info-desc">Передача в течение 24 часов после оплаты</div>
+      <div class="info-title">В стоимость входит:</div>
+      <ul class="info-list">
+        <li>домен djschool.by</li>
+        <li><a href="https://www.instagram.com/djschool.by" target="_blank" rel="noopener noreferrer">Instagram-аккаунт проекта</a></li>
+        <li>оригинальный логотип DJSCHOOL.BY</li>
+        <li>передача всего покупателю после оплаты</li>
+      </ul>
     </div>
   </div>
 </div>
