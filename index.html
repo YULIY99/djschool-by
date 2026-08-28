@@ -296,9 +296,52 @@ footer {
 
 .faq-item p { margin-top: 10px; font-size: 14px; }
 
+.vibedeck-card {
+  width: min(100%, 760px);
+  margin-top: 42px;
+  padding: 24px 26px;
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 16px;
+  background: rgba(255,255,255,0.055);
+  text-align: left;
+}
+
+.vibedeck-card h2 {
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.vibedeck-card p {
+  max-width: 620px;
+  color: rgba(255,255,255,0.58);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.vibedeck-link {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 18px;
+  padding: 10px 16px;
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 999px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.vibedeck-link:hover {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.28);
+}
+
 @media (max-width: 620px) {
   .seo-grid { grid-template-columns: 1fr; }
   .seo-content { margin-top: 48px; }
+  .vibedeck-card { padding: 22px 20px; }
 }
 </style>
 </head>
@@ -372,6 +415,12 @@ footer {
         <p>Напишите продавцу на <a href="mailto:yuliymetelsky@gmail.com">yuliymetelsky@gmail.com</a>, чтобы уточнить состав передачи и условия сделки.</p>
       </details>
     </div>
+  </section>
+
+  <section class="vibedeck-card" aria-labelledby="vibedeck-title">
+    <h2 id="vibedeck-title">VibeDeck</h2>
+    <p>Offline music player for iPhone &amp; iPad — real-time pitch (±8 semitones), 4-band EQ, BPM, waveform and DJ-style tools. MP3, FLAC, WAV. No ads, no account.</p>
+    <a class="vibedeck-link" href="https://apps.apple.com/app/id6784724920" target="_blank" rel="noopener">Download on the App Store</a>
   </section>
 </main>
 
