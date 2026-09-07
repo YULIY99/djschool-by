@@ -369,37 +369,65 @@ footer {
 .vibedeck-store-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 12px;
   margin-top: 18px;
 }
 
 .vibedeck-store-link {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  gap: 9px;
-  min-width: 204px;
+  justify-content: flex-start;
+  gap: 11px;
+  width: 220px;
+  min-height: 62px;
   padding: 10px 16px;
-  border: 1px solid rgba(255,255,255,0.2);
-  border-radius: 999px;
-  background: #050505;
+  border: 1px solid rgba(255,255,255,0.28);
+  border-radius: 10px;
+  background: #000;
   color: #fff;
-  font-size: 13px;
-  font-weight: 600;
   text-decoration: none;
+  box-shadow: 0 7px 18px rgba(0,0,0,0.24), inset 0 1px 0 rgba(255,255,255,0.08);
   transition: background 0.2s, border-color 0.2s, transform 0.2s;
 }
 
 .vibedeck-store-link:hover {
   transform: translateY(-1px);
-  background: rgba(255,255,255,0.08);
-  border-color: rgba(104,215,255,0.55);
+  background: #101010;
+  border-color: rgba(255,255,255,0.5);
 }
 
 .vibedeck-store-link svg {
-  width: 18px;
-  height: 18px;
+  width: 25px;
+  height: 25px;
   flex: 0 0 auto;
+}
+
+.vibedeck-store-link .apple-mark {
+  width: 25px;
+  font-size: 27px;
+  text-align: center;
+}
+
+.store-badge-copy {
+  display: grid;
+  gap: 2px;
+  text-align: left;
+}
+
+.store-badge-copy small {
+  color: rgba(255,255,255,0.72);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  line-height: 1;
+}
+
+.store-badge-copy strong {
+  color: #fff;
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
 }
 
 @media (max-width: 620px) {
@@ -496,13 +524,13 @@ footer {
       </figure>
     </div>
     <div class="vibedeck-store-links" aria-label="Download VibeDeck">
-      <a class="vibedeck-store-link" href="https://apps.apple.com/app/id6784724920" target="_blank" rel="noopener">
+      <a class="vibedeck-store-link" href="https://apps.apple.com/app/id6784724920" target="_blank" rel="noopener" aria-label="Download VibeDeck on the App Store">
         <span class="apple-mark" aria-hidden="true"></span>
-        <span>Download on the App Store</span>
+        <span class="store-badge-copy"><small>Download on the</small><strong>App Store</strong></span>
       </a>
-      <a class="vibedeck-store-link" href="https://play.google.com/store/apps/details?id=com.vibedeck.player" target="_blank" rel="noopener">
+      <a class="vibedeck-store-link" href="https://play.google.com/store/apps/details?id=com.vibedeck.player" target="_blank" rel="noopener" aria-label="Get VibeDeck on Google Play">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#34a853" d="M2.4 3.2c-.25.32-.4.74-.4 1.25v15.1c0 .51.15.93.4 1.25L13.2 10.1z"/><path fill="#4285f4" d="m16.65 13.55-3.45-3.45L2.4 20.8c.4.5 1.07.56 1.72.2z"/><path fill="#fbbc04" d="m20.45 10.25-3.8-2.2L13.2 10.1l3.45 3.45 3.8-2.2c.72-.4.72-.7 0-1.1z"/><path fill="#ea4335" d="M4.12 3c-.65-.36-1.32-.3-1.72.2l10.8 10.35 3.45-3.45z"/></svg>
-        <span>Get it on Google Play</span>
+        <span class="store-badge-copy"><small>Get it on</small><strong>Google Play</strong></span>
       </a>
     </div>
   </section>
