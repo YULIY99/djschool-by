@@ -331,26 +331,33 @@ footer {
 }
 
 .vibedeck-visuals {
-  display: grid;
-  align-items: start;
-  max-width: 520px;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
-  margin-top: 22px;
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+  padding-bottom: 12px;
 }
 
-.vibedeck-visuals figure {
-  overflow: hidden;
-  border: 1px solid rgba(74,207,255,0.18);
-  border-radius: 14px;
-  background: #050a0e;
+.phone {
+  position: relative;
+  width: min(100%, 300px);
+  padding: 9px;
+  border-radius: 52px;
+  background: linear-gradient(150deg, #2a3946 0%, #0d151d 30%, #070b10 70%, #1f2c37 100%);
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.09), inset 0 1px 0 1px rgba(255,255,255,0.06), 0 48px 120px -32px rgba(30,159,214,0.45), 0 24px 64px -24px rgba(0,0,0,0.9);
 }
-
-.vibedeck-visuals img {
-  display: block;
-  width: 100%;
-  height: auto;
+.phone::before {
+  content: "";
+  position: absolute;
+  top: 21px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30%;
+  height: 22px;
+  border-radius: 999px;
+  background: #000;
+  z-index: 2;
 }
+.phone img { display: block; width: 100%; height: auto; border-radius: 43px; background: #05080e; }
 
 .vibedeck-link {
   display: inline-flex;
@@ -418,7 +425,7 @@ footer {
   .seo-grid { grid-template-columns: 1fr; }
   .seo-content { margin-top: 48px; }
   .vibedeck-card { padding: 22px 20px; }
-  .vibedeck-visuals { grid-template-columns: 1fr; }
+  .phone { width: min(100%, 260px); }
   .vibedeck-card h2 { font-size: 20px; }
   .store-badge img { height: 52px; }
 }
@@ -472,13 +479,10 @@ footer {
         <img src="assets/badges/google-play-en.svg" alt="Get it on Google Play" width="188" height="56">
       </a>
     </div>
-    <div class="vibedeck-visuals" aria-label="Скриншоты VibeDeck">
-      <figure>
+    <div class="vibedeck-visuals" aria-label="Скриншот VibeDeck">
+      <div class="phone">
         <img src="assets/vibedeck-offline-music-player-iphone-now-playing-800.webp" alt="VibeDeck на iPhone: играет Hot Since 82 — Life's Too Short, питч и волна трека" width="800" height="1734" loading="lazy">
-      </figure>
-      <figure>
-        <img src="assets/vibedeck-offline-music-player-android-540.webp" alt="VibeDeck на Android: питч и волна трека" width="540" height="959" loading="lazy">
-      </figure>
+      </div>
     </div>
   </section>
 
