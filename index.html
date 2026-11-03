@@ -332,6 +332,8 @@ footer {
 
 .vibedeck-visuals {
   display: grid;
+  align-items: start;
+  max-width: 520px;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
   margin-top: 22px;
@@ -371,74 +373,45 @@ footer {
   border-color: rgba(255,255,255,0.28);
 }
 
-.apple-mark {
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
-  font-size: 18px;
-  line-height: 1;
+.vibedeck-card {
+  border-color: rgba(74,207,255,0.28);
+  background: linear-gradient(160deg, rgba(74,207,255,0.10), rgba(255,255,255,0.04) 55%);
+  box-shadow: 0 18px 50px rgba(0,0,0,0.35);
 }
+
+.vibedeck-tag {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(74,207,255,0.14);
+  color: #7fdcff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.vibedeck-card h2 { font-size: 24px; line-height: 1.25; }
 
 .vibedeck-store-links {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
-  margin-top: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 20px;
 }
 
-.vibedeck-store-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 11px;
-  width: 100%;
-  min-height: 62px;
-  padding: 10px 16px;
-  border: 1px solid rgba(255,255,255,0.28);
-  border-radius: 10px;
-  background: #000;
-  color: #fff;
-  text-decoration: none;
-  box-shadow: 0 7px 18px rgba(0,0,0,0.24), inset 0 1px 0 rgba(255,255,255,0.08);
-  transition: background 0.2s, border-color 0.2s, transform 0.2s;
+.store-badge {
+  display: inline-block;
+  border-radius: 12px;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.vibedeck-store-link:hover {
-  transform: translateY(-1px);
-  background: #101010;
-  border-color: rgba(255,255,255,0.5);
-}
+.store-badge img { display: block; height: 56px; width: auto; }
 
-.vibedeck-store-link svg {
-  width: 25px;
-  height: 25px;
-  flex: 0 0 auto;
-}
-
-.vibedeck-store-link .apple-mark {
-  width: 25px;
-  font-size: 27px;
-  text-align: center;
-}
-
-.store-badge-copy {
-  display: grid;
-  gap: 2px;
-  text-align: left;
-}
-
-.store-badge-copy small {
-  color: rgba(255,255,255,0.72);
-  font-size: 10px;
-  font-weight: 500;
-  letter-spacing: 0.03em;
-  line-height: 1;
-}
-
-.store-badge-copy strong {
-  color: #fff;
-  font-size: 19px;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  line-height: 1.05;
+.store-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.4);
 }
 
 @media (max-width: 620px) {
@@ -446,8 +419,8 @@ footer {
   .seo-content { margin-top: 48px; }
   .vibedeck-card { padding: 22px 20px; }
   .vibedeck-visuals { grid-template-columns: 1fr; }
-  .vibedeck-store-links { grid-template-columns: 1fr; }
-  .vibedeck-store-link { width: 100%; }
+  .vibedeck-card h2 { font-size: 20px; }
+  .store-badge img { height: 52px; }
 }
 </style>
 </head>
@@ -487,6 +460,28 @@ footer {
     </div>
   </div>
 
+  <section class="vibedeck-card" aria-labelledby="vibedeck-title">
+    <div class="vibedeck-tag">Для диджеев</div>
+    <h2 id="vibedeck-title">VibeDeck — плеер для твоей локальной музыки</h2>
+    <p>Офлайн-плеер для iPhone, iPad и Android: питч в реальном времени (±8 полутонов), 4-полосный эквалайзер, BPM и волна трека. MP3, FLAC, WAV. Без рекламы и без аккаунта.</p>
+    <div class="vibedeck-store-links" aria-label="Скачать VibeDeck">
+      <a class="store-badge" href="https://apps.apple.com/app/vibedeck-player/id6784724920?pt=129091862&amp;ct=djschool&amp;mt=8" target="_blank" rel="noopener" aria-label="Скачать VibeDeck в App Store для iPhone и iPad">
+        <img src="assets/badges/app-store-en.svg" alt="Download on the App Store" width="168" height="56">
+      </a>
+      <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.vibedeck.player&amp;referrer=utm_source%3Ddjschool.by%26utm_medium%3Dwebsite%26utm_campaign%3Dvibedeck-card" target="_blank" rel="noopener" aria-label="Скачать VibeDeck в Google Play для Android">
+        <img src="assets/badges/google-play-en.svg" alt="Get it on Google Play" width="188" height="56">
+      </a>
+    </div>
+    <div class="vibedeck-visuals" aria-label="Скриншоты VibeDeck">
+      <figure>
+        <img src="assets/vibedeck-offline-music-player-iphone-now-playing-800.webp" alt="VibeDeck на iPhone: играет Hot Since 82 — Life's Too Short, питч и волна трека" width="800" height="1734" loading="lazy">
+      </figure>
+      <figure>
+        <img src="assets/vibedeck-offline-music-player-android-540.webp" alt="VibeDeck на Android: питч и волна трека" width="540" height="959" loading="lazy">
+      </figure>
+    </div>
+  </section>
+
   <section class="seo-content" aria-labelledby="about-title">
     <h2 id="about-title">Домен для DJ-школы, диджей-студии или музыкальных курсов</h2>
     <p>
@@ -525,28 +520,6 @@ footer {
     <a class="guide-link" href="/domen-dlya-dj-shkoly/">Руководство: как выбрать домен для DJ-школы в Беларуси →</a>
   </section>
 
-  <section class="vibedeck-card" aria-labelledby="vibedeck-title">
-    <h2 id="vibedeck-title">VibeDeck</h2>
-    <p>Offline music player for iPhone, iPad &amp; Android — real-time pitch (±8 semitones), 4-band EQ, BPM, waveform and DJ-style tools. MP3, FLAC, WAV. No ads, no account.</p>
-    <div class="vibedeck-visuals" aria-label="VibeDeck screenshots">
-      <figure>
-        <img src="assets/vibedeck-ios-banner.png" alt="VibeDeck — Same Track. New Feeling. on iPhone">
-      </figure>
-      <figure>
-        <img src="assets/vibedeck-android-banner.png" alt="VibeDeck — Same Track. New Feeling. on Android">
-      </figure>
-    </div>
-    <div class="vibedeck-store-links" aria-label="Download VibeDeck">
-      <a class="vibedeck-store-link" href="https://apps.apple.com/app/id6784724920" target="_blank" rel="noopener" aria-label="Download VibeDeck on the App Store">
-        <span class="apple-mark" aria-hidden="true"></span>
-        <span class="store-badge-copy"><small>Download on the</small><strong>App Store</strong></span>
-      </a>
-      <a class="vibedeck-store-link" href="https://play.google.com/store/apps/details?id=com.vibedeck.player" target="_blank" rel="noopener" aria-label="Get VibeDeck on Google Play">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#34a853" d="M2.4 3.2c-.25.32-.4.74-.4 1.25v15.1c0 .51.15.93.4 1.25L13.2 10.1z"/><path fill="#4285f4" d="m16.65 13.55-3.45-3.45L2.4 20.8c.4.5 1.07.56 1.72.2z"/><path fill="#fbbc04" d="m20.45 10.25-3.8-2.2L13.2 10.1l3.45 3.45 3.8-2.2c.72-.4.72-.7 0-1.1z"/><path fill="#ea4335" d="M4.12 3c-.65-.36-1.32-.3-1.72.2l10.8 10.35 3.45-3.45z"/></svg>
-        <span class="store-badge-copy"><small>Get it on</small><strong>Google Play</strong></span>
-      </a>
-    </div>
-  </section>
   <section class="seo-content" aria-label="Преимущества домена djschool.by">
     <h2>Почему djschool.by</h2>
     <div class="seo-grid">
